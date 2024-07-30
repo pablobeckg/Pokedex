@@ -1,0 +1,48 @@
+.type-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type-wrap img {
+  width: 100px;
+}
+
+.type-titel {
+    color: #ffcb05;
+    -webkit-text-stroke: 2.5px #2c72b8;
+    margin: 30px 0;
+    font-family: "Roboto-black";
+    font-size: 36px;
+}
+
+.type-wrap a {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-family: "Roboto";
+  font-size: 28px;
+}
+
+.type-button {
+  font-family: "Roboto-black";
+  border: none;
+  color: white;
+}
+
+.type-button:hover {
+  cursor: pointer;
+}
+
+.type-div {
+    margin-top: 23px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 19px;
+  }
+
+  .type-div button {
+    width: 100%;
+  }

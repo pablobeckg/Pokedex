@@ -1,0 +1,13 @@
+.type-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 20px;
+}
+
+.type-text {
+    color: #ffcb05;
+    -webkit-text-stroke: 2.5px #2c72b8;
+    margin-top: 30px;
+    font-family: "Roboto-black";
+    font-size: 36px;
+}
