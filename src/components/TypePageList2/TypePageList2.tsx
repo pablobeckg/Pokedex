@@ -16,7 +16,7 @@ export interface IPokemonTypeGroup {
   }[];
 }
 
-const TypePageList = () => {
+const TypePageList2 = () => {
   const { types } = useParams<{ types: string }>();
   const [pokemonTypeGroup, setPokemonTypeGroup] =
     useState<IPokemonTypeGroup | null>(null);
@@ -49,4 +49,4 @@ const TypePageList = () => {
   );
 };
 
-export default TypePageList;
+export default TypePageList2;

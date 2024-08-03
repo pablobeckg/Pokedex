@@ -1,10 +1,10 @@
-import TypePageList from "../components/TypePageList/TypePageList";
+import TypePageList2 from "../components/TypePageList2/TypePageList2";
 
 
 const TypePokemonPage = () => {
   return (
     <div>
-      <TypePageList />
+      <TypePageList2 />
     </div>
   );
 };
