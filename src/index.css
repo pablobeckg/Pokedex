@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/Roboto-Regular.ttf");
+  src: url("/fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: "Roboto-black";
-  src: url("fonts/Roboto-Black.ttf");
+  src: url("/fonts/Roboto-Black.ttf");
 }
 
 * {
