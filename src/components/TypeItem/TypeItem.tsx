@@ -1,43 +1,42 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { IPokemon } from "../TypePageLIst/TypePageList";
+import { IPokemon } from "../TypePageList/TypePageList";
 import { IPokemonData } from "../../IPokemonData";
 
-
 export interface ITypeItemProps {
-    pokemon: IPokemon;
-  }
+  pokemon: IPokemon;
+}
 
 const TypeItem: React.FC<ITypeItemProps> = (props) => {
-    const [pokemonItem, setPokemonItem] = useState<IPokemonData>(null!);
-    const id = pokemonItem?.id.toString().padStart(3, '0');
+  const [pokemonItem, setPokemonItem] = useState<IPokemonData | null>(null);
+  const id = pokemonItem?.id.toString().padStart(3, "0");
 
-    useEffect(() => {
-        fetch(`${props.pokemon.url}`)
-          .then((res) => res.json())
-          .then((data) => setPokemonItem(data))
-          .catch((err) =>
-            console.error("Error by fetching pokemon item data", err)
-          );
-      }, []);
+  useEffect(() => {
+    fetch(props.pokemon.url)
+      .then((res) => res.json())
+      .then((data) => setPokemonItem(data))
+      .catch((err) => console.error("Error fetching pokemon item data", err));
+  }, [props.pokemon.url]);
 
-    return (
+  if (!pokemonItem || pokemonItem.id > 150) {
+    return null;
+  }
 
-        <Link to={`/${pokemonItem?.name}`}>
+  return (
+    <Link to={`/${pokemonItem.name}`}>
       <div className="pokemon-item">
         <img
           className="pokemon-image"
-          src={pokemonItem?.sprites.front_default}
-          alt="Pokemon image"
+          src={pokemonItem.sprites.front_default}
+          alt={`${pokemonItem.name} image`}
         />
         <div className="info-div">
-        <p>#{id}</p>
-        <p>{pokemonItem?.name}</p>
+          <p>#{id}</p>
+          <p>{pokemonItem.name.charAt(0).toUpperCase() + pokemonItem.name.slice(1)}</p>
         </div>
       </div>
     </Link>
-    );
-}
- 
-export default TypeItem;
+  );
+};
 
+export default TypeItem;

@@ -1,4 +1,4 @@
-import TypePageList from "../components/TypePageLIst/TypePageList";
+import TypePageList from "../components/TypePageList/TypePageList";
 
 const TypePokemonPage = () => {
   return (

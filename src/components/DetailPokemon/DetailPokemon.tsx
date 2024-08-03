@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IPokemonData, IType } from "../../IPokemonData";
 import "./DetailPokemon.css";
-import Loading from "../Loading/Loading";
+import LoadingPage from "../../pages/LoadingPage/LoadingPage";
 
 export const typeColors: { [key: string]: string } = {
   normal: "#A8A77A",
@@ -44,6 +44,7 @@ const DetailPokemon = () => {
  
 
   return (
+    detailPokemon ?
     <div className="detail-pokemon">
       <div className="background-pokemon">
         <img
@@ -52,7 +53,7 @@ const DetailPokemon = () => {
         />
       </div>
       <h1>
-        #{id} {detailPokemon?.name}
+        #{id} {detailPokemon.name.charAt(0).toUpperCase() + detailPokemon.name.slice(1)}
       </h1>
       <div className="type-container">
         { detailPokemon ? (detailPokemon?.types.map((typeInfo: IType) => (
@@ -66,9 +67,10 @@ const DetailPokemon = () => {
           >
             {typeInfo.type.name.toLocaleUpperCase()}
           </div>
-        ))) : (<Loading/>)}
+        ))) : (<LoadingPage/>)}
       </div>
     </div>
+    : null
   );
 };
 

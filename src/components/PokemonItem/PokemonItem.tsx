@@ -22,6 +22,7 @@ const PokemonItem: React.FC<IPokemonItemProps> = (props) => {
   }, []);
 
   return (
+    pokemonItem ?
     <Link to={`/${pokemonItem?.name}`}>
       <div className="pokemon-item">
         <img
@@ -31,10 +32,11 @@ const PokemonItem: React.FC<IPokemonItemProps> = (props) => {
         />
         <div className="info-div">
         <p>#{id}</p>
-        <p>{pokemonItem?.name}</p>
+        <p>{pokemonItem?.name.charAt(0).toUpperCase() + pokemonItem.name.slice(1)}</p>
         </div>
       </div>
     </Link>
+    : null
   );
 };
 

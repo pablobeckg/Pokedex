@@ -11,15 +11,14 @@ export interface IPokemonType {
   results: IResult[];
 }
 
-// https://pokeapi.co/api/v2/type/${idParams}
-
 const TypeSelector = () => {
 
-  const [pokemonTypeItem, setPokemonTypeItem] = useState<IPokemonType>(null!);
+  const [pokemonType, setPokemonType] = useState<IPokemonType>(null!);
+  
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/type/")
       .then((res) => res.json())
-      .then((data) => setPokemonTypeItem(data))
+      .then((data) => setPokemonType(data))
       .catch((err) =>
         console.error("Error by fetching pokemon item data", err)
       );
@@ -35,20 +34,23 @@ const TypeSelector = () => {
       </div>
       <h1 className="type-titel">Type</h1>
       <div className="type-div">
-        {pokemonTypeItem?.results.map((type) => (
-          <Link to={`/pokemon-type/${type.name}`}>
+        {pokemonType?.results.map((type) => (
+          <div key={type.name}>
+ <Link to={`/pokemon-type/${type.name}`}>
             <button
               className="type-button"
-              key={type.name}
+              
               style={{
                 backgroundColor: typeColors[type.name],
                 padding: "5px",
                 borderRadius: "5px",
               }}
             >
-              {type.name}
+              {type.name.charAt(0).toUpperCase() + type.name.slice(1)}
             </button>
           </Link>
+          </div>
+         
         ))}
       </div>
     </>

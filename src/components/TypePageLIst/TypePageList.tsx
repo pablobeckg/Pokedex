@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TypeItem from "../TypeItem/TypeItem";
-import "./TypePageList.css"
+import "./TypePageList.css";
 import Header from "../Header/Header";
 
 export interface IPokemon {
-    name: string;
-    url: string;
-  }
-  
-  export interface IPokemonTypeGroup {
-    pokemon: {
-      pokemon: IPokemon;
-      slot: number;
-    }[];
-  }
+  name: string;
+  url: string;
+}
+
+export interface IPokemonTypeGroup {
+  pokemon: {
+    pokemon: IPokemon;
+    slot: number;
+  }[];
+}
 
 const TypePageList = () => {
-  const { types } = useParams<{ types?: string }>();
+  const { types } = useParams<{ types: string }>();
   const [pokemonTypeGroup, setPokemonTypeGroup] =
     useState<IPokemonTypeGroup | null>(null);
+
   useEffect(() => {
     if (types) {
       fetch(`https://pokeapi.co/api/v2/type/${types}`)
@@ -33,8 +34,12 @@ const TypePageList = () => {
 
   return (
     <>
-     <Header/>
-      <h1 className="type-text">{types}</h1>
+      <Header />
+      {types && (
+        <h1 className="type-text">
+          {types?.charAt(0).toUpperCase() + types?.slice(1)}
+        </h1>
+      )}
       <div className="type-list">
         {pokemonTypeGroup?.pokemon?.map((entry) => (
           <TypeItem pokemon={entry.pokemon} key={entry.pokemon.name} />
