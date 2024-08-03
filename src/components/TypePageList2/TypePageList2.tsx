@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TypeItem from "../TypeItem/TypeItem";
-import "./TypePageList.css";
+import "./TypePageList2.css";
 import Header from "../Header/Header";
 
 export interface IPokemon {
