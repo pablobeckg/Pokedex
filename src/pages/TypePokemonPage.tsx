@@ -1,5 +1,6 @@
 import TypePageList from "../components/TypePageList/TypePageList";
 
+
 const TypePokemonPage = () => {
   return (
     <div>

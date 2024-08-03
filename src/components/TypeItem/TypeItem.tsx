@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { IPokemon } from "../TypePageList/TypePageList";
 import { IPokemonData } from "../../IPokemonData";
+import { IPokemon } from "../TypePageList/TypePageList";
 
 export interface ITypeItemProps {
   pokemon: IPokemon;
