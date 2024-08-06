@@ -7,9 +7,6 @@ Welcome to **Pokédex Pablo**, an interactive web application that allows users 
 - [Usage](#usage)
 - [Technologies](#technologies)
 - [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Features
 
