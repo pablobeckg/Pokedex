@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+Pokédex Pablo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Table of Contents
+Introduction
+Features
+Technologies Used
+Installation
+Usage
+Contributing
+License
+Contact
+Introduction
+Welcome to Pokédex Pablo! This project is a comprehensive Pokédex web application that provides detailed information about various Pokémon. You can access the live version of the project here.
 
-Currently, two official plugins are available:
+Features
+Browse a list of all Pokémon
+View detailed information for each Pokémon, including stats, abilities, and type
+Search for Pokémon by name or ID
+Responsive design for optimal viewing on different devices
+Technologies Used
+React: JavaScript library for building user interfaces
+Redux: State management library
+Axios: Promise-based HTTP client for the browser and Node.js
+PokéAPI: RESTful API for Pokémon data
+Netlify: Hosting platform
+Installation
+To run this project locally, follow these steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clone the repository:
 
-## Expanding the ESLint configuration
+bash
+Code kopieren
+git clone https://github.com/yourusername/pokedexpablo.git
+cd pokedexpablo
+Install dependencies:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+bash
+Code kopieren
+npm install
+Start the development server:
 
-- Configure the top-level `parserOptions` property like this:
+bash
+Code kopieren
+npm start
+Open your browser and navigate to http://localhost:3000.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Usage
+Once the application is running, you can use the following features:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Home Page: Displays a list of Pokémon with their names and images.
+Search: Use the search bar to find Pokémon by their name or ID.
+Details Page: Click on a Pokémon to view detailed information including stats, abilities, and type.
