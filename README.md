@@ -1,6 +1,6 @@
 # Pokédex Pablo
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge/status)](https://app.netlify.com/sites/pokedexpablo/deploys)
+[![Netlify Status](https://pokedexpablo.netlify.app/)
 
 ## Table of Contents
 
