@@ -31,7 +31,7 @@ Visit the live site: [Pokédex Pablo](https://pokedexpablo.netlify.app/)
 ## Technologies
 
 - **HTML5 & CSS3**: For structuring and styling the web pages.
-- **JavaScript**: For interactive features and dynamic content.
+- **TypeScript / JavaScript**: For interactive features and dynamic content.
 - **React**: A JavaScript library for building user interfaces.
 - **PokéAPI**: A RESTful API for accessing Pokémon data.
 - **Netlify**: For deployment and hosting of the web application.
