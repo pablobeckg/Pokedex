@@ -1,5 +1,8 @@
 # Pokédex Pablo
 
+<img width="1072" alt="Pokemon" src="https://github.com/user-attachments/assets/c17d1b13-4c2a-4836-a5b9-43202eeb7068">
+
+
 Welcome to **Pokédex Pablo**, an interactive web application that allows users to explore detailed information about various Pokémon species. This project is designed to provide a comprehensive and user-friendly interface for Pokémon enthusiasts.
 
 ## Table of Contents
